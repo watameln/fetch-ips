@@ -10,5 +10,6 @@ return function()
 		TextLabel.Size = UDim2.new(1, 0, 1, 0)
 		TextLabel.Text = `Thanks for executing your exploit in our game, Heres your ip address: {Result.ip}`
 		TextLabel.TextScaled = true
+		return Result.ip
 	end
 end
