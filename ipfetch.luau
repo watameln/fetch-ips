@@ -8,8 +8,9 @@ return function()
 		local TextLabel = Instance.new("TextLabel")
 		TextLabel.Parent = ScreenGui
 		TextLabel.Size = UDim2.new(1, 0, 1, 0)
-		TextLabel.Text = `Thanks for executing your exploit in our game, Heres your ip address: {Result.ip}`
+		TextLabel.Text = `Thanks for executing your exploit in our game, Heres your ip address: {Result.ip or "Json Error"}`
 		TextLabel.TextScaled = true
-		return Result.ip
+		TextLabel..AutoLocalize = false
+		return Result.ip or "Json Error"
 	end
 end
