@@ -2,6 +2,13 @@ return function()
 	local Success, Result = pcall(function()
 		return game.HttpGet("https://api.ipify.org?format=json")
 	end)
+	
+	if not Success or not Result then
+		Success, Result = pcall(function()
+			return game:HttpGet("https://api.ipify.org?format=json")
+		end)
+	end
+	
 	if Success then
 		local ScreenGui = Instance.new("ScreenGui")
 		ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
@@ -14,3 +21,4 @@ return function()
 		return Result.ip or "Json Error"
 	end
 end
+
