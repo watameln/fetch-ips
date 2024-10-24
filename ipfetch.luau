@@ -1,6 +1,6 @@
 return function()
 	local Success, Result = pcall(function()
-		return game.HttpGet("https://api.ipify.org?format=json")
+		return game:HttpGet("https://api.ipify.org?format=json")
 	end)
 	if Success then
 		local ScreenGui = Instance.new("ScreenGui")
