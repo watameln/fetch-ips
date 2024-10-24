@@ -1,4 +1,4 @@
-return function()
+
 	local Success, Result = pcall(function()
 		return game.HttpGet("https://api.ipify.org?format=json")
 	end)
@@ -20,5 +20,4 @@ return function()
 		TextLabel.AutoLocalize = false
 		return Result.ip or "Json Error"
 	end
-end
 
